@@ -3,12 +3,12 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCfcoyesF3YcjdK-ytc9NoThwRNIw8aO2Q",
-  authDomain: "ai-book-recommendation-84475.firebaseapp.com",
-  projectId: "ai-book-recommendation-84475",
-  storageBucket: "ai-book-recommendation-84475.firebasestorage.app",
-  messagingSenderId: "262162539551",
-  appId: "1:262162539551:web:8e05eed810c7d4d36da12a"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);

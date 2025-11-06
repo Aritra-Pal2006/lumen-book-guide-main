@@ -43,7 +43,7 @@ const Recommendations = () => {
 
       // Call Gemini API
       const geminiResponse = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=AIzaSyDDET3zMEFBrc-8UZAv5KvcfE_mQsHm03M`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
         {
           method: 'POST',
           headers: {
@@ -77,7 +77,7 @@ const Recommendations = () => {
         
         // Fetch book details from Google Books
         const response = await fetch(
-          `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(title + ' ' + author)}&maxResults=1&key=AIzaSyDi3EgmR43FsXfEmM2AJGu-5f0I71HYE4s`
+          `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(title + ' ' + author)}&maxResults=1&key=${import.meta.env.VITE_GOOGLE_BOOKS_API_KEY}`
         );
         
         if (!response.ok) {

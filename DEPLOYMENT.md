@@ -54,6 +54,8 @@ services:
         value: 18
 ```
 
+The Vite configuration in `vite.config.ts` has been set up to allow the Render host (`lumen-book-guide-main.onrender.com`) for the preview server.
+
 ## Build and Start Commands
 
 - Build command: `npm run build`

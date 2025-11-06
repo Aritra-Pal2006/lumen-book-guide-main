@@ -8,6 +8,17 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    strictPort: false,
+  },
+  preview: {
+    host: "::",
+    port: 8080,
+    strictPort: false,
+    allowedHosts: [
+      'lumen-book-guide-main.onrender.com',
+      'localhost',
+      '127.0.0.1'
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

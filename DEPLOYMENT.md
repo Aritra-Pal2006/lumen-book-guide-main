@@ -32,7 +32,7 @@ VITE_GEMINI_API_KEY=your_gemini_api_key
 5. Configure the service:
    - Name: bookai-app (or any name you prefer)
    - Environment: Node
-   - Build command: `npm run build`
+   - Build command: `npm install --include=dev && npm run build`
    - Start command: `npm run preview`
    - Auto-deploy: Yes
 6. Add your environment variables in the "Environment" section
@@ -47,7 +47,7 @@ services:
   - type: web
     name: bookai-app
     env: node
-    buildCommand: npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm run preview
     envVars:
       - key: NODE_VERSION
